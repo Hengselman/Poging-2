@@ -1,0 +1,365 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.8rem;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  height: 100rem;
+  width: 100%;
+}
+
+main{
+  width: 80%;
+  margin: 0 auto;
+}
+
+figure{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.header--logo{
+  max-width: 10rem;
+  animation-name: logo-fade;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+footer{
+  width: 100%;
+  height: 5rem;
+  background: black;
+  float: right;
+}
+
+footer > p{
+  color: white;
+  float: right;
+  bottom: 0%;
+}
+
+.voorkant, .achterkant{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voorkant > h3{
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.achterkant > p{
+  font-size: 150%;
+}
+
+.quote--box > h1{
+  font-family: 'Syne Mono', monospace;
+
+}
+
+
+/*---------Card flip--------*/
+.pakket {
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.pakket:hover, voorkant:hover {
+  transform: rotateY(180deg);
+}
+
+.voorkant, .achterkant {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.voorkant {
+  background-color: lightgreen;
+  color: black;
+}
+
+.achterkant {
+  transform: rotateY(180deg);
+}
+
+/*----------GRID-----------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  gap: 5rem 0px;
+  grid-template-areas:
+    "pakket--one"
+    "actie--box"
+    "pakket--two"
+    "pakket--three"
+    "pakket--four"
+    "quote--box";
+}
+
+.pakket{
+  background-color: lightgreen;
+  border: 3px solid green;
+  height: 20rem;
+}
+
+.pakket > h3{
+  margin: 10px auto;
+}
+
+.pakket > p{
+  margin-top: 30px;
+}
+
+.box{
+  text-align: center;
+}
+
+.pakket--one {
+  grid-area: pakket--one;
+  margin-top: 100px;
+}
+
+.actie--box { grid-area: actie--box; }
+
+.pakket--two { grid-area: pakket--two; }
+
+.pakket--three { grid-area: pakket--three; }
+
+.pakket--four { grid-area: pakket--four; }
+
+.quote--box {
+  grid-area: quote--box;
+  margin: 5rem;
+}
+
+/*---------------Picture grid-------------*/
+.picture--grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.picture--grid > figure{
+  position: relative;
+}
+
+.picture--grid > figure::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.picture--grid > figure:hover::after{
+  opacity: 0.2;
+}
+
+.picture--grid > figure > img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.picture--grid > figure:nth-of-type(1){
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.picture--grid > figure:nth-of-type(2){
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+}
+
+.picture--grid > figure:nth-of-type(3){
+  grid-column: 1 / span 2;
+  grid-row: 2 / 2;
+  object-fit: fill;
+}
+
+.picture--grid > figure:nth-of-type(4){
+  grid-column: 1 / 1;
+  grid-row: 3 / 3;
+}
+
+.picture--grid > figure:nth-of-type(5){
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+}
+
+.hart1{
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  display: none;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  opacity: 0.5;
+  object-position: center;
+}
+
+.hart2{
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+  display: none;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  opacity: 0.5;
+  object-position: center;
+}
+
+.hart3{
+  grid-column: 1 / span 2;
+  grid-row: 2 / 2;
+  display: none;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  opacity: 0.5;
+  object-position: center;
+}
+
+.hart4{
+  display: none;
+  grid-column: 1 / 1;
+  grid-row: 3 / 3;
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  opacity: 0.5;
+  object-position: center;
+}
+
+.hart5{
+  position: absolute;
+  display: none;
+  grid-column: 2 / 2;
+  grid-row: 3 / 3;
+  width: 60%;
+  height: 60%;
+  background-color: white;
+  opacity: 0.5;
+  object-position: center;
+}
+
+
+
+/*-------animaties--------*/
+@keyframes logo-fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/*--------Media Queries-------*/
+@media only screen and (min-width: 580px) {
+  footer{
+    height: 3rem;
+  }
+
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 5rem 5rem;
+    grid-template-areas:
+      "pakket--one pakket--two"
+      "actie--box actie--box"
+      "pakket--three pakket--four"
+      "quote--box quote--box";
+  }
+
+  .pakket--two{
+    margin-top: 100px;
+  }
+
+  .picture--grid{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-rows: repeat(2,minmax(0,1fr));
+    margin-bottom: 5rem;
+  }
+
+  .picture--grid > figure:nth-of-type(1){
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .picture--grid > figure:nth-of-type(2){
+    grid-column: 2 / 2;
+    grid-row: 1 / 1
+  }
+
+  .picture--grid > figure:nth-of-type(3){
+    grid-column: 1 / span 2;
+    grid-row: 2 / 2
+  }
+
+  .picture--grid > figure:nth-of-type(4){
+    grid-column: 3 / 3;
+    grid-row: 1 / span 2;
+  }
+
+  .picture--grid > figure:nth-of-type(5){
+    grid-column: 4 / 4;
+    grid-row: 1 / span 2;
+  }
+
+
+
+}
+
+/*---------Support Queries-------*/
+@supports (height: 100vh){
+  body{
+    height: 100vh;
+  }
+}
