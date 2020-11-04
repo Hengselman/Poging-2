@@ -351,9 +351,6 @@ footer > p{
     grid-column: 4 / 4;
     grid-row: 1 / span 2;
   }
-
-
-
 }
 
 /*---------Support Queries-------*/
