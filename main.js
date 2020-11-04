@@ -7,6 +7,20 @@ function scrollbar() {
   document.getElementById("progressbar").style.width = scrolled + "%";
 }
 
+hart1 = document.getElementById('hartje1');
+hart2 = document.getElementById('hartje2');
+hart3 = document.getElementById('hartje3');
+hart4 = document.getElementById('hartje4');
+hart5 = document.getElementById('hartje5');
+
 function show1() {
-  document.getElementById('hart1').style.display ='grid';
+  this.style.zindex = "1";
 }
+
+function reset() {
+  this.style.zindex = "-1";
+}
+
+
+hart1.addEventListener("mouseover",show1);
+hart1.addEventListener("mouseout",reset);

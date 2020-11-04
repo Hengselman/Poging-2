@@ -30,7 +30,7 @@ figure{
 header{
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   background-color: #f1f1f1;
 }
@@ -231,41 +231,39 @@ footer > p{
 .hart1{
   grid-column: 1 / 1;
   grid-row: 1 / 1;
-  display: none;
   position: absolute;
   width: 60%;
   height: 60%;
   background-color: white;
   opacity: 0.5;
-  object-position: center;
+  z-index: -1;
 }
 
 .hart2{
   grid-column: 2 / 2;
   grid-row: 1 / 1;
-  display: none;
   position: absolute;
   width: 60%;
   height: 60%;
   background-color: white;
   opacity: 0.5;
   object-position: center;
+  z-index: -1;
 }
 
 .hart3{
   grid-column: 1 / span 2;
   grid-row: 2 / 2;
-  display: none;
   position: absolute;
   width: 60%;
   height: 60%;
   background-color: white;
   opacity: 0.5;
   object-position: center;
+  z-index: -1;
 }
 
 .hart4{
-  display: none;
   grid-column: 1 / 1;
   grid-row: 3 / 3;
   position: absolute;
@@ -274,11 +272,11 @@ footer > p{
   background-color: white;
   opacity: 0.5;
   object-position: center;
+  z-index: -1;
 }
 
 .hart5{
   position: absolute;
-  display: none;
   grid-column: 2 / 2;
   grid-row: 3 / 3;
   width: 60%;
@@ -286,6 +284,7 @@ footer > p{
   background-color: white;
   opacity: 0.5;
   object-position: center;
+  z-index: -1;
 }
 
 
