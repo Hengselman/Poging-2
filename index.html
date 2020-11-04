@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css"/>
     <title>Born2Read - Leesplezier tot aan de voordeur</title>
   </head>
@@ -21,8 +22,7 @@
             <h3>Pakket 1!</h3>
           </div>
           <div class="achterkant">
-            <p>Weekaanbieding abonnement</p>
-            <p>3 boeken voor de prijs van 2!</p>
+            <p>Weekaanbieding abonnement: 3 boeken voor de prijs van 2!</p>
           </div>
         </article>
         <article class="box actie--box">
@@ -34,8 +34,7 @@
             <h3>Pakket 2!</h3>
           </div>
           <div class="achterkant">
-            <p>Beginnersgeluk abonnement</p>
-            <p>Eerste 3 maanden gratis, daarna 7,- euro per maand!</p>
+            <p>Beginnersgeluk abonnement: Eerste 3 maanden gratis, daarna 7,- euro per maand!</p>
         </div>
       </article>
         <article class="pakket pakket--three">
@@ -43,8 +42,7 @@
             <h3>Pakket 3!</h3>
           </div>
           <div class="achterkant">
-            <p>Lui lezen abonnement</p>
-            <p>2 boeken, om de maand. Voor 4 euro per maand!</p>
+            <p>Lui lezen abonnement: 2 boeken, om de maand. Voor 4 euro per maand!</p>
           </div>
         </article>
         <article class="pakket pakket--four">
@@ -52,8 +50,7 @@
             <h3>Pakket 4!</h3>
           </div>
           <div class="achterkant">
-            <p>Gulle gever abonnement</p>
-            <p>Betaal de volle klap en support ons!</p>
+            <p>Gulle gever abonnement: Betaal de volle klap en support ons!</p>
           </div>
         </article>
         <article class="box quote--box">
@@ -61,26 +58,16 @@
         </article>
       </section>
       <section class="picture--grid">
-        <figure><img id="foto1" src="img/boeken1.jpg" alt=""><img class="hart1" id="hartje1" src="img/hartzwart.png" onmouseover="show1()" onmouseout="reset1()" alt=""></figure>
-        <figure><img src="img/boeken2.jpg" alt=""><img class="hart2" id="hartje2" src="img/hartzwart.png" onmouseover="show2()" alt=""></figure>
-        <figure><img src="img/boeken3.jpg" alt=""><img class="hart3" id="hartje3" src="img/hartzwart.png" onmouseover="show3()" alt=""></figure>
-        <figure><img src="img/boeken4.jpg" alt=""><img class="hart4" id="hartje4" src="img/hartzwart.png" onmouseover="show4()" alt=""></figure>
-        <figure><img src="img/boeken5.jpg" alt=""><img class="hart5" id="hartje5" src="img/hartzwart.png" onmouseover="show5()" alt=""></figure>
+        <figure id="figure1"><img id="foto1" src="img/boeken1.jpg" alt=""><img class="hart1" id="hartje1" src="img/hartzwart.png" alt=""></figure>
+        <figure id="figure2"><img src="img/boeken2.jpg" alt=""><img class="hart2" id="hartje2" src="img/hartzwart.png" onmouseover="show2()" alt=""></figure>
+        <figure id="figure3"><img src="img/boeken3.jpg" alt=""><img class="hart3" id="hartje3" src="img/hartzwart.png" onmouseover="show3()" alt=""></figure>
+        <figure id="figure4"><img src="img/boeken4.jpg" alt=""><img class="hart4" id="hartje4" src="img/hartzwart.png" onmouseover="show4()" alt=""></figure>
+        <figure id="figure5"><img src="img/boeken5.jpg" alt=""><img class="hart5" id="hartje5" src="img/hartzwart.png" onmouseover="show5()" alt=""></figure>
       </section>
     </main>
     <footer>
       <p>Website gemaakt in opdracht van Hogeschool Leiden door Devin Stigter.</p>
     </footer>
     <script src="main.js"></script>
-    <script>
-    function show1() {
-    document.getElementById("hartje1").style.zIndex = "1";
-    document.getElementById("foto1").style.zIndex = "0";
-    }
-
-    function reset1() {
-      document.getElementById("hartje1").style.zIndex = "-1";
-    }
-    </script>
   </body>
 </html>

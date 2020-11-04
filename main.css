@@ -11,7 +11,7 @@ html{
 body{
   font-size: 1.8rem;
   background-color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Raleway', sans-serif;
   height: 100rem;
   width: 100%;
 }
@@ -357,8 +357,26 @@ footer > p{
 }
 
 /*---------Support Queries-------*/
-@supports (height: 100vh){
-  body{
-    height: 100vh;
+@supports not (grid-template-columns: 1fr){
+  .picture--grid{
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+  }
+
+  .grid-container {
+    -ms-grid-columns: auto;
+    -ms-grid-rows: auto auto auto auto auto auto;
+  }
+
+  @media only screen and (min-width: 800px){
+    .grid-container {
+      -ms-grid-columns: auto auto;
+      -ms-grid-rows: auto auto auto auto;
+    }
+
+    .picture--grid{
+      -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      -ms-grid-rows: 1fr 1fr;
+    }
   }
 }
